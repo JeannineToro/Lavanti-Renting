@@ -1,8 +1,3 @@
-body{
-    background-color: rgb(30, 30, 30);
-    color: #fff;
-}
-
 .main{
     display: flex;
     flex-direction: column;
@@ -50,60 +45,21 @@ body{
     margin: 0;
 }
 .header__nav-item{
-    max-width: 110px;
+    max-width: 120px;
 }
 .header__nav-link{
     text-decoration: none;
     color: #fff;
     font-size: 0.7rem;
 }
+.header__nav-link i{
+    font-size: 1.4rem;
+}
 .header__nav-link:hover{
-    color: gray;
+    color: #8ffc00;
 }
 .header__nav-img{
     width: 15px;
-}
-
-
-@media (max-width: 768px) {
-    .header {
-        justify-content: space-between;
-    }
-    .header__toggle {
-        display: flex;
-    }
-    .header__nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0px;
-        background-color: #111;
-        padding: 20px;
-        border-radius: 8px;
-        z-index: 1000;
-        width: 100%;
-    }
-    .header__nav-item {
-        max-width: 270px;
-        height: 25px;
-    }
-    .header__nav-img--home,
-    .header__nav-img--lavadora,
-    .header__nav-img--usuario{
-        display: none;
-    }
-    .header__nav--active {
-        display: flex;
-    }
-    .header__nav-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .header__nav-link {
-        font-size: 1rem;
-        text-align: center;
-    }
 }
 
 
@@ -115,17 +71,12 @@ body{
     align-items: center;
     text-align: center;
     padding: 50px 20px;
-    /* background: linear-gradient(to bottom, #000, #222); */
 }
 .renting__title{
     color: #8ffc00;
-    /* background: #ccc;
-    background: linear-gradient(60deg, #8ffd00, #97c757); */
     font-size: 6rem;
     font-weight: bold;
     margin-top: 20px;
-    /* -webkit-text-fill-color: transparent;
-    background-clip: text; */
 }
 .renting__title-spot{
     color: #e84d26;
@@ -146,22 +97,18 @@ body{
     font-weight: bold;
 }
 .renting__tagline--orange{
-    /* color: #e84d26; */
     background: #ccc;
     background: linear-gradient(40deg, #e84d26 30%, #83be36);
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 .renting__tagline--yellow{
-    /* color: #8ffc00; */
     background: #ccc;
     background: linear-gradient(-40deg, #8ffd00 10%, #e06648);
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 .renting__machines{
-    /* background-image: url('/img/curvas.png');
-    background-repeat: no-repeat; */
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -176,29 +123,6 @@ body{
 .renting__machine{
     width: 300px;
 }
-
-@media (max-width: 768px){
-    .renting__machines-md{
-        display: block;
-    }
-
-    .renting__machines-lg{
-        display: none;
-    }
-    .renting__title{
-        font-size: 3.5rem;
-    }
-    .renting__subtitle{
-        width: 300px;
-    }
-    .renting__tagline{
-        font-size: 1.8rem;
-        width: 250px;
-    }
-
-
-}
-
 
 
 /*----------  BENEFITS  ----------*/
@@ -220,13 +144,6 @@ body{
     filter: drop-shadow(0 0 0.75rem rgb(220, 45, 45));
 }
 
-@media (max-width: 768px){
-    .benefits{
-        gap: 60px;
-    }
-}
-
-
 
 /*----------  CARD  ----------*/
 .card{
@@ -234,6 +151,7 @@ body{
     padding: 20px;
     background-color: rgb(40, 40, 40);
     margin-top: 60px;
+    margin-bottom: 60px;
     font-size: 1.6rem;
     border-radius: 30px;
     max-width: 550px;
@@ -263,31 +181,149 @@ body{
     background-color: #8ffc00;
 }
 
-@media (max-width: 768px){
-    .card{
-        max-width: 300px;
-        font-size: 1.2rem;
-        margin-top: 25px;
-        font-weight: lighter;
-    }
-}
-
-
 
 /*----------  FOOTER  ----------*/
 .footer{
+    display: flex;
+    justify-content: space-around;
     padding: 20px;
     background-color: #000;
     text-align: center;
+    font-size: .8rem;
+}
+.footer__info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width:  40%;
 }
 .footer__info-item{
     margin-bottom: 5px;
+}
+.footer__socials{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-left: 1px solid white;
+    padding-left: 35px;
+}
+.footer__socials-links{
+    font-size: 1.5rem;
 }
 .footer__social-link{
     margin: 0 10px;
     color: #fff;
     text-decoration: none;
 }
+.footer__social-link i:hover,
+.footer__socials-legal a:hover{
+    color: #8ffc00;
+}
+.footer__socials-legal{
+    font-size: .6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*----------  RESPONSIVE  ----------*/
+@media (max-width: 768px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .header__toggle {
+        display: flex;
+    }
+
+    .header__nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        background-color: #111;
+        padding: 20px;
+        border-radius: 8px;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .header__nav-item {
+        max-width: 270px;
+        height: 25px;
+    }
+
+    .header__nav-img--lavadora,
+    .link--person {
+        display: none;
+    }
+
+    .header__nav--active {
+        display: flex;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__nav-link {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+
+    .renting__machines-md {
+        display: block;
+    }
+    
+    .renting__machines-lg {
+        display: none;
+    }
+    
+    .renting__title {
+        font-size: 3.5rem;
+    }
+    
+    .renting__subtitle {
+        width: 300px;
+    }
+    
+    .renting__tagline {
+        font-size: 1.8rem;
+        width: 250px;
+    }
+
+
+    .benefits {
+        gap: 60px;
+    }
+
+    .card {
+        max-width: 300px;
+        font-size: 1.2rem;
+        margin-top: 25px;
+        font-weight: lighter;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    .footer__info {
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .footer__socials {
+        border: none;
+        justify-content: center;
+    }
+}
+
 
 
 
