@@ -232,17 +232,44 @@ body{
 .card{
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: rgb(40, 40, 40);
+    margin-top: 60px;
+    font-size: 1.6rem;
+    border-radius: 30px;
+    max-width: 550px;
+    font-weight: bold;
+    color: rgb(170, 169, 169);
+}
+.card__text{
+    padding: 15px 30px;
+}
+.card__text-white{
+    color: white;
 }
 .card__button{
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
     color: #000;
-    background-color: #a7ed4b;
+    background-color: #89ca33;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.card__button:hover{
+    background-color: #8ffc00;
+}
+
+@media (max-width: 768px){
+    .card{
+        max-width: 300px;
+        font-size: 1.2rem;
+        margin-top: 25px;
+        font-weight: lighter;
+    }
 }
 
 
