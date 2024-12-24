@@ -3,6 +3,12 @@ body{
     color: #fff;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /*----------  HEADER  ----------*/
 
@@ -185,10 +191,10 @@ body{
     .renting__subtitle{
         width: 300px;
     }
-        .renting__tagline{
-            font-size: 1.8rem;
-            width: 250px;
-        }
+    .renting__tagline{
+        font-size: 1.8rem;
+        width: 250px;
+    }
 
 
 }
@@ -198,16 +204,26 @@ body{
 /*----------  BENEFITS  ----------*/
 .benefits{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
     padding: 40px 20px;
-    background-color: #111;
+    width: 75%;
 }
 .benefit{
     text-align: center;
+    width: 170px;
 }
 .benefit__icon{
-    width: 50px;
+    width: 40px;
     margin-bottom: 10px;
+    filter: drop-shadow(0 0 0.75rem rgb(220, 45, 45));
+}
+
+@media (max-width: 768px){
+    .benefits{
+        gap: 60px;
+    }
 }
 
 
